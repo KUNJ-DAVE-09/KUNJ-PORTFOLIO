@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio website for a web developer showcasing projects, skills, and contact information." />
+  <title>Kunj Dave | Web Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <a href="#home" class="logo">Kunj Dave</a>
+      <button id="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <h1>Hello, I’m Kunj Dave</h1>
+      <p>A web developer learning HTML, CSS, JavaScript, Git, and GitHub.</p>
+      <a class="button" href="#projects">View My Projects</a>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am building practical web-development skills and enjoy creating clean,
+        accessible, responsive websites.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <article class="project">
+        <img
+          src="https://via.placeholder.com/600x350"
+          alt="Screenshot of a portfolio project website"
+          width="600"
+          height="350"
+        />
+        <h3>Portfolio Website</h3>
+        <p>A responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+        <a href="#" target="_blank" rel="noopener">View project</a>
+      </article>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="form-status" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Kunj Dave. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
