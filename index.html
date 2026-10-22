@@ -1,78 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio website for a web developer showcasing projects, skills, and contact information." />
-  <title>Kunj Dave | Web Developer Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="#home" class="logo">Kunj Dave</a>
-      <button id="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
-      <ul id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kunj Dave's portfolio showcasing web development projects, skills, and work experience."
+    />
+    <title>Kunj Dave | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a href="#home" class="logo">Kunj<span>Dave</span></a>
 
-  <main>
-    <section id="home" class="hero">
-      <h1>Hello, I’m Kunj Dave</h1>
-      <p>A web developer learning HTML, CSS, JavaScript, Git, and GitHub.</p>
-      <a class="button" href="#projects">View My Projects</a>
-    </section>
+        <button id="menu-toggle" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        I am building practical web-development skills and enjoy creating clean,
-        accessible, responsive websites.
-      </p>
-    </section>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <article class="project">
-        <img
-          src="https://via.placeholder.com/600x350"
-          alt="Screenshot of a portfolio project website"
-          width="600"
-          height="350"
-        />
-        <h3>Portfolio Website</h3>
-        <p>A responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
-        <a href="#" target="_blank" rel="noopener">View project</a>
-      </article>
-    </section>
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Web Developer • UI Enthusiast</p>
+            <h1>Hello, I'm <span>Kunj Dave</span></h1>
+            <p class="lead">
+              I design and build responsive, clean, and engaging websites that turn ideas
+              into memorable digital experiences.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">View My Work</a>
+              <a class="button secondary" href="#contact">Let’s Talk</a>
+            </div>
+            <ul class="mini-stats" aria-label="Key skills and stats">
+              <li><strong>2+</strong><span>Years learning</span></li>
+              <li><strong>10+</strong><span>Projects</span></li>
+              <li><strong>100%</strong><span>Curiosity</span></li>
+            </ul>
+          </div>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <form id="contact-form">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" required />
+          <div class="hero-card" aria-label="Profile summary card">
+            <div class="profile-badge">KD</div>
+            <h2>Available for freelance & personal projects</h2>
+            <p>
+              Building practical skills in HTML, CSS, JavaScript, Git, and GitHub while
+              creating polished interfaces for the web.
+            </p>
+            <div class="badge-row">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" required />
+      <section id="about" class="section">
+        <div class="container two-column">
+          <div>
+            <p class="section-tag">About Me</p>
+            <h2>Designing simple experiences with strong visual clarity.</h2>
+          </div>
+          <div>
+            <p>
+              I’m a web developer focused on building accessible, modern, and responsive
+              experiences. My work blends structure, creativity, and clean code to help
+              users enjoy every interaction.
+            </p>
+            <p>
+              I enjoy learning through hands-on projects, from portfolio sites to landing
+              pages and UI experiments. Each project helps me improve both my design eye
+              and technical foundation.
+            </p>
+          </div>
+        </div>
+      </section>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+      <section id="projects" class="section alt-bg">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Projects</p>
+            <h2>Featured work</h2>
+          </div>
 
-        <button type="submit">Send Message</button>
-      </form>
-      <p id="form-status" role="status"></p>
-    </section>
-  </main>
+          <div class="project-grid">
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=900&q=80"
+                alt="Modern portfolio website preview"
+              />
+              <div class="project-content">
+                <h3>Personal Portfolio</h3>
+                <p>
+                  A clean, responsive portfolio site crafted to highlight my work, design
+                  sense, and front-end development skills.
+                </p>
+                <a href="#home">Open project</a>
+              </div>
+            </article>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Kunj Dave. All rights reserved.</p>
-  </footer>
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+                alt="Web design concept preview"
+              />
+              <div class="project-content">
+                <h3>Coursera Web Design</h3>
+                <p>
+                  A previous learning project focused on visual hierarchy, layout design,
+                  and creating aesthetically pleasing web experiences.
+                </p>
+                <a href="https://khwahish017.github.io/Introduction-to-web-designing-Coursera/" target="_blank" rel="noopener">Visit project</a>
+              </div>
+            </article>
 
-  <script src="script.js"></script>
-</body>
+            <article class="project-card">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                alt="Code editor workspace"
+              />
+              <div class="project-content">
+                <h3>UI Practice & Experiments</h3>
+                <p>
+                  Exploring layout systems, gradients, cards, forms, and animations to build
+                  more polished digital interfaces.
+                </p>
+                <a href="#contact">Discuss ideas</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-tag">Skills</p>
+            <h2>Tools I’m growing with</h2>
+          </div>
+
+          <div class="skills-grid">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Responsive Design</span>
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>UI/UX</span>
+            <span>Accessibility</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container contact-wrap">
+          <div>
+            <p class="section-tag">Contact</p>
+            <h2>Let’s build something meaningful together.</h2>
+            <p class="contact-copy">
+              I’m open to freelance work, creative collaborations, and opportunities to
+              grow into better front-end projects.
+            </p>
+            <div class="contact-links">
+              <a class="social-link" href="https://www.linkedin.com/in/kunjdave27" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+
+            <button type="submit">Send Message</button>
+            <p id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Kunj Dave</p>
+        <p>Built with HTML, CSS & JavaScript</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

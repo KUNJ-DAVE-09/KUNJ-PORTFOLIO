@@ -2,20 +2,27 @@
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
-menuToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  menuToggle.setAttribute("aria-expanded", isOpen.toString());
-});
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen.toString());
+  });
+}
 
 // Contact form feedback
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  formStatus.textContent = "Thank you! Your message has been received.";
-  contactForm.reset();
-});
+if (contactForm && formStatus) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    formStatus.textContent = "Thank you! Your message has been received.";
+    contactForm.reset();
+  });
+}
 
 // Automatic copyright year
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearNode = document.getElementById("year");
+if (yearNode) {
+  yearNode.textContent = new Date().getFullYear();
+}
